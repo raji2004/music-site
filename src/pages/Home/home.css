@@ -4,14 +4,17 @@
 }
 .con {
   max-width: 1186px;
+  width: 1146px;
+  padding: 10px 10px;
 }
 .search {
   margin-top: 10px;
   margin-left: 60px;
+  color: var(--light);
 }
 .search img {
   position: absolute;
-  top: 19px;
+  top: 32px;
 }
 
 .input {
