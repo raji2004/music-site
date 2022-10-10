@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: row;
 }
+.con {
+  max-width: 1186px;
+}
 .search {
   margin-top: 10px;
   margin-left: 60px;
@@ -23,30 +26,42 @@
   margin-top: 50px;
   margin-left: -10px;
 }
-.pic {
-  width: 786px;
-  height: 482px;
-}
+
 .pic img {
-  width: 786px;
-  height: 482px;
+  width: 686px;
+  height: 382px;
+}
+.pic img:hover {
+  transform: scale3d(1.1, 1.1, 1);
+  transition: 0.3s;
+  filter: brightness(80%);
+  transition: transform 0.5s;
 }
 .topchart {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  margin-top: -10px;
 }
 .topchart h1 {
   color: var(--light);
+  margin: 10px;
 }
 .music {
   background-color: #141515;
-  width: 317px;
+  width: 417px;
   display: flex;
   padding-block: 80px;
+  margin-block: 5px;
   height: 66px;
   border-radius: 20px;
   padding: 10px 10px;
+}
+.music:hover {
+  background-color: rgba(248, 29, 0, 0.496);
+  color: var(--white);
+  transform: scale3d(1.1, 1.1, 1);
+  transition: 0.5s;
 }
 .album {
   width: 63px;
@@ -75,8 +90,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 130px;
+  margin-left: auto;
   height: 30px;
   width: 30px;
   border: 1px solid var(--light);
+}
+.new {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+.single {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+.txt-container p {
+  margin: 0;
+  color: var(--light);
+  margin-top: 4px;
+}
+.img-container img {
+  width: 100px;
+  height: 133px;
+}
+.c {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-top: -40px;
+}
+.c h4 {
+  color: var(--light);
+  margin: 6px 0;
+  font-size: 30px;
 }

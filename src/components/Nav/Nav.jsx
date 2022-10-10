@@ -31,11 +31,11 @@ function Nav() {
         <ul className="ul">
           <li>
             {" "}
-            <i class="fa-solid fa-user"></i>
+            <i className="fa-solid fa-user"></i>
           </li>
           <li>
             {" "}
-            <i class="fa-solid fa-right-from-bracket"></i>
+            <i className="fa-solid fa-right-from-bracket"></i>
           </li>
         </ul>
       </div>

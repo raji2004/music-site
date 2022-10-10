@@ -13,36 +13,49 @@
 ul {
   background-color: #141515;
   width: fit-content;
-  width: 20px;
-  height: 230px;
+  width: 10px;
+  height: 250px;
 
   list-style-type: none;
   color: gray;
   border-radius: 20px;
 }
 ul li {
-  margin-left: -30px;
-  margin-block: 15px;
+  margin-left: -28px;
+  margin-block: 25px;
+}
+ul li img:hover {
+  color: var(--primary);
+  transform: scale(1.5);
+  transition: 0.5s;
 }
 ul li img {
-  width: 35px;
+  width: 25px;
 }
 .p {
   color: gray;
 }
 i {
-  font-size: 28px;
+  font-size: 18px;
+}
+i:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+.icon {
+  fill: yellow;
 }
 .i {
   margin-left: -5px;
-  width: 45px;
+  width: 35px;
+  filter: brightness(50%);
 }
 .ul {
-  height: 120px;
-  width: fit-content;
+  height: 110px;
+  width: 10px;
 }
 .ul li {
   margin-left: -24px;
   margin-right: 12px;
-  margin-block: 15px;
+  margin-block: 25px;
 }

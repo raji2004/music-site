@@ -1,0 +1,8 @@
+.rr {
+  z-index: 99px;
+  width: 200px;
+  height: 1000px;
+  background-color: white;
+  position: sticky;
+  bottom: 100px;
+}
