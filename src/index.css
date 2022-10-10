@@ -7,3 +7,6 @@
   --alt: #a4c7c6;
   background-color: var(--dark);
 }
+* {
+  font-family: "Open Sans", sans-serif;
+}

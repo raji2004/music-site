@@ -1,8 +1,8 @@
 .rr {
-  z-index: 99px;
-  width: 200px;
-  height: 1000px;
-  background-color: white;
+  z-index: 1px;
+  width: 100%;
+  height: 80px;
+  backdrop-filter: blur(9px);
   position: sticky;
-  bottom: 100px;
+  bottom: 0px;
 }

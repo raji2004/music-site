@@ -45,6 +45,10 @@ function Home() {
             <h4>New releases.</h4>
             <div className="new">{a}</div>
           </div>
+          <div className="c">
+            <h4>Popular in your area.</h4>
+            <div className="new">{a}</div>
+          </div>
         </div>
         {/* 
 hovering div! */}
