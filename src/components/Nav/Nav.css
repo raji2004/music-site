@@ -1,0 +1,48 @@
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.logo {
+  margin-bottom: 30px;
+}
+ul {
+  background-color: #141515;
+  width: fit-content;
+  width: 20px;
+  height: 230px;
+
+  list-style-type: none;
+  color: gray;
+  border-radius: 20px;
+}
+ul li {
+  margin-left: -30px;
+  margin-block: 15px;
+}
+ul li img {
+  width: 35px;
+}
+.p {
+  color: gray;
+}
+i {
+  font-size: 28px;
+}
+.i {
+  margin-left: -5px;
+  width: 45px;
+}
+.ul {
+  height: 120px;
+  width: fit-content;
+}
+.ul li {
+  margin-left: -24px;
+  margin-right: 12px;
+  margin-block: 15px;
+}

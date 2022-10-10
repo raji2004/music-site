@@ -1,0 +1,82 @@
+.home {
+  display: flex;
+  flex-direction: row;
+}
+.search {
+  margin-top: 10px;
+  margin-left: 60px;
+}
+.search img {
+  position: absolute;
+  top: 19px;
+}
+
+.input {
+  background: var(--dark);
+  border: none;
+  padding-left: 40px;
+  font-size: 15px;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-left: -10px;
+}
+.pic {
+  width: 786px;
+  height: 482px;
+}
+.pic img {
+  width: 786px;
+  height: 482px;
+}
+.topchart {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.topchart h1 {
+  color: var(--light);
+}
+.music {
+  background-color: #141515;
+  width: 317px;
+  display: flex;
+  padding-block: 80px;
+  height: 66px;
+  border-radius: 20px;
+  padding: 10px 10px;
+}
+.album {
+  width: 63px;
+  height: 63px;
+}
+.album img {
+  width: 63px;
+  height: 100%;
+}
+.words {
+  margin-left: 15px;
+
+  color: var(--light);
+}
+.words h3 {
+  margin: 0;
+}
+.words p {
+  margin: 0;
+  font-size: 15px;
+  margin-block: 5px;
+}
+.like {
+  border-radius: 50%;
+  margin-top: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 130px;
+  height: 30px;
+  width: 30px;
+  border: 1px solid var(--light);
+}
