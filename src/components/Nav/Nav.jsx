@@ -5,6 +5,7 @@ import radio from "../../assets/radio.svg";
 import video from "../../assets/videos.svg";
 import logo from "../../assets/logo.svg";
 import "./Nav.css";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
@@ -14,7 +15,14 @@ function Nav() {
         <ul>
           <li>
             {" "}
-            <img src={homeicon} alt="" className="i" />
+            <Link
+              to="/"
+              onClick={() => {
+                Router.push("/");
+              }}
+            >
+              <img src={homeicon} alt="" className="i" />
+            </Link>
           </li>
           <li>
             <img src={playlisticon} alt="" />

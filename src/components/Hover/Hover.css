@@ -106,3 +106,9 @@ ol li {
 .v {
   display: flex;
 }
+.s {
+  display: flex;
+}
+.x {
+  margin-left: -10px;
+}

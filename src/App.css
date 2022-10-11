@@ -1,1 +1,12 @@
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+.stick {
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
 
+  box-shadow: 10px 10px 10px -13px #121617;
+  z-index: 12;
+}

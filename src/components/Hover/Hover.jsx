@@ -39,7 +39,7 @@ export default function Hover() {
           <div className="btn">
             <ol>
               <li>
-                <i class="fa-solid fa-shuffle fat"></i>
+                <i className="fa-solid fa-shuffle fat"></i>
               </li>
               <li>
                 <i className="fa-solid fa-backward-step fat"></i>
@@ -67,7 +67,8 @@ export default function Hover() {
           </div>
           <audio src={m1}></audio>
         </div>
-        <div className="slider">
+        <div className="slider s">
+          <i class="fa-solid fa-volume-high fat "></i>
           <input
             className="vv"
             style={{ backgroundSize: `${v}% 100%` }}

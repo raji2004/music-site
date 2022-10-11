@@ -4,7 +4,7 @@
 }
 .con {
   max-width: 1186px;
-  width: 1146px;
+  width: 1126px;
   padding: 10px 10px;
 }
 .search {
@@ -43,11 +43,13 @@
 .topchart {
   display: flex;
   flex-direction: column;
+
   margin-left: 20px;
   margin-top: -10px;
 }
 .topchart h1 {
   color: var(--light);
+  text-decoration: none;
   margin: 10px;
 }
 .music {
@@ -113,14 +115,18 @@
   flex-direction: column;
   margin: 0 10px;
 }
+.single:hover {
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
 .txt-container p {
   margin: 0;
   color: var(--light);
   margin-top: 4px;
 }
 .img-container img {
-  width: 100px;
-  height: 133px;
+  width: 120px;
+  height: 103px;
 }
 .c {
   display: flex;

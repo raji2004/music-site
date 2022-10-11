@@ -26,7 +26,7 @@ function Home() {
   return (
     <div>
       <div className="home">
-        <Nav />
+        {/* <Nav /> */}
         <div className="con">
           <div className="search">
             <img src={search} alt="" />
