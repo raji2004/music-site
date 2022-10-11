@@ -1,6 +1,4 @@
 import React from "react";
-import Hover from "../../components/hover/Hover";
-import Nav from "../../components/Nav/Nav";
 import img1 from "../../assets/playlist.svg";
 import albumdata from "../../assets/Data/albumdata";
 import "./Playlist.css";
