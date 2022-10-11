@@ -52,7 +52,6 @@ function Home() {
         </div>
         {/* 
 hovering div! */}
-        <Hover />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Home from "./pages/Home/Home";
 import Hover from "./components/Hover/Hover";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
