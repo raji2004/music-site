@@ -1,12 +1,7 @@
 import { useState } from "react";
 import pic from "../../assets/Data/1.png";
 import m1 from "../../assets/music/Bruno Mars - That’s What I Like (Official Music Video) - Copy.mp3";
-// import m2 from "../../assets/music/Bruno Mars - That’s What I Like (Official Music Video).ogg";
-import shuffle from "../../assets/shuffle.svg";
-import back from "../../assets/back.svg";
-import play from "../../assets/p.svg";
-import next from "../../assets/next.svg";
-import repeat from "../../assets/repeat.svg";
+
 import "./Hover.css";
 export default function Hover() {
   const [s, sets] = useState("");

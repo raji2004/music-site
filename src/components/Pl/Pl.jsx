@@ -1,5 +1,5 @@
 import React from "react";
-import img1 from "../../assets/playlist.svg";
+
 import heart from "../../assets/heart.svg";
 
 export default function Pl({ img, title, subtitle, time, type }) {
