@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Hover from "./components/Hover/Hover";
 import Nav from "./components/Nav/Nav";
 import img1 from "./assets/playlist.svg";

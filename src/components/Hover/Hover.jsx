@@ -68,7 +68,7 @@ export default function Hover() {
           <audio src={m1}></audio>
         </div>
         <div className="slider s">
-          <i class="fa-solid fa-volume-high fat "></i>
+          <i className="fa-solid fa-volume-high fat "></i>
           <input
             className="vv"
             style={{ backgroundSize: `${v}% 100%` }}
