@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../../components/Nav/Nav";
+
 import search from "../../assets/search.svg";
 import cover from "../../assets/Data/cover.svg";
 import data from "../../assets/Data/data";
