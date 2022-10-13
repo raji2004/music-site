@@ -1,34 +1,43 @@
 import { useState, useEffect, useMemo } from "react";
-import pic from "../../assets/Data/1.png";
-import m1 from "../../assets/music/Bruno Mars - That’s What I Like (Official Music Video) - Copy.mp3";
-
+import albumdata from "../../assets/Data/albumdata";
 import "./Hover.css";
 export default function Hover() {
-  const [s, sets] = useState("");
   const [v, setv] = useState("");
+  const [count, setcount] = useState(0);
   const [pause, setpause] = useState(true);
-  const [time, setTime] = useState(0);
+
+  const [albumobject, setalbumobject] = useState(albumdata[count]);
   const [icon, seticon] = useState(
     <i className="fa-solid fa-play fat " onClick={play}></i>
   );
-  let t = 0;
-  const audio = useMemo(() => new Audio(m1), [m1]);
+
+  function playprev() {
+    setcount((prev) => prev - 1);
+    audio.pause();
+    audio.currentTime = 0;
+  }
+  function playnext() {
+    setcount((prev) => prev + 1);
+    audio.pause();
+    audio.currentTime = 0;
+  }
+  useEffect(() => {
+    setalbumobject(albumdata[count]);
+    audio.src = albumobject.sound;
+    audio.pause();
+    audio.currentTime = 0;
+  }, [count]);
+  function toogleloop() {
+    // audio.loop = !audio.loop;
+  }
+  const audio = useMemo(
+    () => new Audio(albumobject.sound),
+    [albumobject.sound]
+  );
 
   pause ? audio.pause() : audio.play();
-  function Change(e) {
-    console.log(e.target);
-    console.log(e.target.value);
 
-    setInterval(() => {
-      t++;
-    }, 1000);
-    sets(t);
-    setTime(audio.duration);
-    console.log(s);
-  }
   function hChange(e) {
-    console.log(e.target);
-    console.log(e.target.value);
     let t = e.target.value;
     setv(t);
 
@@ -53,10 +62,10 @@ export default function Hover() {
       {" "}
       <div className="action">
         <div className="song-info">
-          <img src={pic} alt="" />
+          <img src={albumobject.img} alt="" />
           <div className="title">
-            <h4>Life Goes on</h4>
-            <p>Sean walker</p>
+            <h4>{albumobject.title}</h4>
+            <p>{albumobject.type}</p>
           </div>
         </div>
         <div className="audio">
@@ -66,21 +75,27 @@ export default function Hover() {
                 <i className="fa-solid fa-shuffle fat"></i>
               </li>
               <li>
-                <i className="fa-solid fa-backward-step fat"></i>
+                <i
+                  className="fa-solid fa-backward-step fat"
+                  onClick={playprev}
+                ></i>
               </li>
               <li className="fa">
                 {icon}
                 {/* <i class="fa-solid fa-pause fat"></i> */}
               </li>
               <li>
-                <i className="fa-solid fa-forward-step fat "></i>
+                <i
+                  className="fa-solid fa-forward-step fat "
+                  onClick={playnext}
+                ></i>
               </li>
               <li>
-                <i className="fa-solid fa-repeat fat"></i>
+                <i className="fa-solid fa-repeat fat" onClick={toogleloop}></i>
               </li>
             </ol>
           </div>
-          <div className="slider">
+          {/* <div className="slider">
             <input
               style={{ backgroundSize: `${s}% 100%` }}
               type="range"
@@ -89,7 +104,7 @@ export default function Hover() {
               max={time}
               onChange={Change}
             />
-          </div>
+          </div> */}
         </div>
         <div className="slider s">
           <i className="fa-solid fa-volume-high fat "></i>

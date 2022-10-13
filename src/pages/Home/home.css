@@ -140,3 +140,12 @@
   margin: 6px 0;
   font-size: 30px;
 }
+.hee {
+  color: white;
+}
+.hot {
+  color: var(--secondary);
+}
+.ch:hover {
+  transform: scale(1);
+}

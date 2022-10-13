@@ -8,26 +8,32 @@ import img7 from "./2.png";
 import img8 from "./3.png";
 import img9 from "./Rectangle 14.png";
 import img10 from "./Rectangle 26.png";
+import music1 from "../music/1.mp3";
+import music2 from "../music/2.mp3";
+import music3 from "../music/3.mp3";
 const data = [
   {
     id: 1,
     img: img1,
     type: "single",
     time: "3:14",
+    sound: music1,
     title: "Life in a bubble",
   },
   {
     id: 2,
-    img: img2,
+    img: img3,
     type: "single",
     time: "1:14",
+    sound: music2,
     title: "Reggae 'n' blues",
   },
   {
     id: 3,
-    img: img3,
+    img: img10,
     type: "single",
     time: "4:14",
+    sound: music3,
     title: "Tomorrow's tunes",
   },
   {
