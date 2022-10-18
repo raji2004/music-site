@@ -1,8 +1,3 @@
-body {
-  background-image: url("../../assets/Data/Rectangle 20.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 .playlist-container {
   display: flex;
   max-width: 1166px;

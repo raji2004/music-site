@@ -2,14 +2,24 @@
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  margin-left: 10px;
   align-items: center;
   justify-content: center;
   width: fit-content;
   height: 100%;
 }
+.menu {
+  display: none;
+}
 .logo {
   margin-bottom: 30px;
+  margin-right: 250px;
+  /* margin-left: 10px; */
 }
+.logo-container {
+  display: flex;
+}
+
 ul {
   width: fit-content;
   width: 10px;
@@ -57,4 +67,42 @@ i:hover {
   margin-left: -24px;
   margin-right: 12px;
   margin-block: 25px;
+}
+@media only screen and (max-width: 570px) {
+  .nav-container {
+    max-width: 570px;
+    width: 100%;
+  }
+  .menu {
+    display: block;
+    margin-right: 10px;
+  }
+  .logo {
+    margin-bottom: 30px;
+  }
+  .logo-container {
+    display: flex;
+    margin-right: auto;
+  }
+  .main-menu {
+    margin-left: -10px;
+    width: 300px;
+
+    background-color: var(--dark);
+  }
+  /* .none {
+    transform: translateX(-100%);
+    transition: width 5s;
+    display: none;
+  } */
+  .ul {
+    margin-top: 70px;
+  }
+  ul li {
+    display: flex;
+    align-items: center;
+  }
+  ul li .menu {
+    margin-left: 10px;
+  }
 }

@@ -3,10 +3,9 @@
   flex-direction: row;
 }
 .stick {
-  position: -webkit-sticky;
+  position: fixed;
   top: 0;
   left: 0;
 
-  box-shadow: 10px 10px 10px -13px #121617;
   z-index: 12;
 }

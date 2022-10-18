@@ -5,42 +5,41 @@ export default function Hover() {
   const [v, setv] = useState("");
   const [count, setcount] = useState(0);
   const [pause, setpause] = useState(true);
-
   const [albumobject, setalbumobject] = useState(albumdata[count]);
   const [icon, seticon] = useState(
     <i className="fa-solid fa-play fat " onClick={play}></i>
   );
 
-  function playprev() {
-    setcount((prev) => prev - 1);
-    audio.pause();
-    audio.currentTime = 0;
-  }
-  function playnext() {
-    setcount((prev) => prev + 1);
-    audio.pause();
-    audio.currentTime = 0;
-  }
-  useEffect(() => {
-    setalbumobject(albumdata[count]);
-    audio.src = albumobject.sound;
-    audio.pause();
-    audio.currentTime = 0;
-  }, [count]);
-  function toogleloop() {
-    // audio.loop = !audio.loop;
-  }
   const audio = useMemo(
     () => new Audio(albumobject.sound),
     [albumobject.sound]
   );
-
-  pause ? audio.pause() : audio.play();
+  function playprev() {
+    audio.pause();
+    audio.currentTime = 0;
+    setcount((prev) => prev - 1);
+  }
+  function playnext() {
+    audio.pause();
+    audio.currentTime = 0;
+    setcount((prev) => prev + 1);
+  }
+  useEffect(() => {
+    audio.pause();
+    audio.currentTime = 0;
+    setalbumobject(albumdata[count]);
+    audio.src = albumobject.sound;
+  }, [count]);
+  function toogleloop() {
+    // audio.loop = !audio.loop;
+  }
+  useEffect(() => {
+    pause ? audio.pause() : audio.play();
+  }, [pause]);
 
   function hChange(e) {
     let t = e.target.value;
     setv(t);
-
     audio.volume = e.target.value / 100;
   }
   useEffect(() => {

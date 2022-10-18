@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 
 import search from "../../assets/search.svg";
 import cover from "../../assets/Data/cover.svg";
@@ -8,9 +8,25 @@ import "./home.css";
 import Topchart from "../../components/Music/Music";
 
 import Albums from "../../components/Albums/Albums";
-import Hover from "../../components/Hover/Hover";
 
 function Home() {
+  const [song, setsong] = useState([]);
+  const [chartEntryData, trackMetadata] = song;
+  console.log(song);
+  useEffect(() => {
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": "bc589cd1d3msh8f35ad50b71a6f1p1b5bc6jsn8b0efd70732f",
+        "X-RapidAPI-Host": "spotify81.p.rapidapi.com",
+      },
+    };
+
+    fetch("https://spotify81.p.rapidapi.com/top_200_tracks", options)
+      .then((response) => response.json())
+      .then((response) => setsong(response))
+      .catch((err) => console.error(err));
+  }, []);
   const p = data.map((item) => (
     <Topchart
       key={item.id}
@@ -20,8 +36,12 @@ function Home() {
       time={item.time}
     />
   ));
-  const a = albumdata.map((item) => (
-    <Albums key={item.id} img={item.img} title={item.title} />
+  const a = song.map((item) => (
+    <Albums
+      key={item.chartEntryData.currentRank}
+      img={item.trackMetadata.displayImageUri}
+      title={item.trackMetadata.trackName}
+    />
   ));
   return (
     <div>
@@ -38,7 +58,7 @@ function Home() {
             </div>
             <div className="topchart">
               <h1>Top chart</h1>
-              {p}
+              <div className="album-container">{p}</div>
             </div>
           </div>
           <div className="c">

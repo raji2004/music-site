@@ -1,6 +1,7 @@
 .home {
   display: flex;
   flex-direction: row;
+  margin-left: 20px;
 }
 .con {
   max-width: 1186px;
@@ -20,6 +21,7 @@
 .input {
   background: var(--dark);
   border: none;
+  color: var(--light);
   padding-left: 40px;
   font-size: 15px;
 }
@@ -51,6 +53,10 @@
   color: var(--light);
   text-decoration: none;
   margin: 10px;
+}
+.sinfo {
+  display: flex;
+  flex-direction: row;
 }
 .music {
   background-color: #141515;
@@ -148,4 +154,63 @@
 }
 .ch:hover {
   transform: scale(1);
+}
+@media only screen and (max-width: 570px) {
+  .con {
+    max-width: 570px;
+    width: 100%;
+    padding: 10px 10px;
+  }
+  .search {
+    margin-left: 340px;
+    margin-top: 3px;
+    width: 10%;
+  }
+  .input {
+    height: 20px;
+  }
+  .input::placeholder {
+    color: transparent;
+  }
+  .search img {
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    left: 500px;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .pic {
+    width: 100%;
+  }
+  .pic img {
+    width: 100%;
+    height: 100%;
+  }
+  .album-container {
+    display: flex;
+    flex-direction: row;
+    margin-block: 30px;
+
+    overflow: scroll;
+  }
+  .music {
+    width: 323px;
+    height: 233px;
+    margin-right: 40px;
+  }
+  .sinfo {
+    flex-direction: column;
+  }
+  .album img {
+    width: 108px;
+    height: 99px;
+  }
+  .words {
+    margin-top: 60px;
+  }
+  .c h4 {
+    margin-block: 20px;
+  }
 }

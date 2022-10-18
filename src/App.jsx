@@ -18,7 +18,7 @@ function App() {
           <Route path="playlist" element={<Playlist />} />
         </Routes>
       </div>
-      <Hover />
+      {/* <Hover /> */}
     </div>
   );
 }
