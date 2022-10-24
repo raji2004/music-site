@@ -10,23 +10,6 @@ import Topchart from "../../components/Music/Music";
 import Albums from "../../components/Albums/Albums";
 
 function Home() {
-  const [song, setsong] = useState([]);
-  const [chartEntryData, trackMetadata] = song;
-  console.log(song);
-  useEffect(() => {
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "bc589cd1d3msh8f35ad50b71a6f1p1b5bc6jsn8b0efd70732f",
-        "X-RapidAPI-Host": "spotify81.p.rapidapi.com",
-      },
-    };
-
-    fetch("https://spotify81.p.rapidapi.com/top_200_tracks", options)
-      .then((response) => response.json())
-      .then((response) => setsong(response))
-      .catch((err) => console.error(err));
-  }, []);
   const p = data.map((item) => (
     <Topchart
       key={item.id}
@@ -36,12 +19,8 @@ function Home() {
       time={item.time}
     />
   ));
-  const a = song.map((item) => (
-    <Albums
-      key={item.chartEntryData.currentRank}
-      img={item.trackMetadata.displayImageUri}
-      title={item.trackMetadata.trackName}
-    />
+  const a = albumdata.map((item) => (
+    <Albums key={item.id} img={item.img} title={item.title} />
   ));
   return (
     <div>
@@ -70,8 +49,6 @@ function Home() {
             <div className="new">{a}</div>
           </div>
         </div>
-        {/* 
-hovering div! */}
       </div>
     </div>
   );

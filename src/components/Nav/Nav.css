@@ -72,6 +72,8 @@ i:hover {
   .nav-container {
     max-width: 570px;
     width: 100%;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
   .menu {
     display: block;
@@ -79,10 +81,12 @@ i:hover {
   }
   .logo {
     margin-bottom: 30px;
+    width: 50px;
   }
   .logo-container {
     display: flex;
     margin-right: auto;
+    margin-left: 40px;
   }
   .main-menu {
     margin-left: -10px;

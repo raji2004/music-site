@@ -70,7 +70,7 @@ export default function Hover() {
         <div className="audio">
           <div className="btn">
             <ol>
-              <li>
+              <li className="none">
                 <i className="fa-solid fa-shuffle fat"></i>
               </li>
               <li>
@@ -89,7 +89,7 @@ export default function Hover() {
                   onClick={playnext}
                 ></i>
               </li>
-              <li>
+              <li className="none">
                 <i className="fa-solid fa-repeat fat" onClick={toogleloop}></i>
               </li>
             </ol>
@@ -105,7 +105,7 @@ export default function Hover() {
             />
           </div> */}
         </div>
-        <div className="slider s">
+        <div className="slider s none">
           <i className="fa-solid fa-volume-high fat "></i>
           <input
             className="vv"
